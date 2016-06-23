@@ -50,6 +50,7 @@ class Slider {
     };
 
     private displayPicture(){
+        // Then kod nie dziala poprawnie
 
        var x =document.getElementById('img');
        x.setAttribute("src", this._picturesArray[this._currentImgIndex]);
