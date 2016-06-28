@@ -1,10 +1,10 @@
 let picturesArray:string[] = [
-    './src_files/picture1.jpg',
-    './src_files/picture2.jpg',
-    './src_files/picture3.jpg',
-    './src_files/picture4.jpg',
-    './src_files/picture5.jpg',
-    './src_files/picture6.jpg',
+    './images/picture1.jpg',
+    './images/picture2.jpg',
+    './images/picture3.jpg',
+    './images/picture4.jpg',
+    './images/picture5.jpg',
+    './images/picture6.jpg',
 ];
 
 
@@ -17,8 +17,6 @@ document.getElementById('switch-left').addEventListener("click", function () {
 document.getElementById('switch-right').addEventListener("click", function () {
     slider.switchRight()
 });
-
-
 
 
 class Slider {
@@ -49,13 +47,16 @@ class Slider {
         this.displayPicture();
     };
 
-    private displayPicture(){
-       document.getElementById('img').src = this._picturesArray[this._currentImgIndex];
+    private displayPicture() {
+        document.getElementById('img').src = this._picturesArray[this._currentImgIndex];
     }
-
 }
 
-
 var slider = new Slider(picturesArray);
+
+setInterval(function () {
+    slider.switchRight();
+}, 3000)
+
 
 
