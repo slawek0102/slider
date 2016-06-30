@@ -29,5 +29,5 @@ gulp.task("watch", function () {
     gulp.watch(["./*.html", "./*.js"], browserSync.reload);
 });
 
-gulp.task('default', ["css", "browser-sync", "watch"]);
+gulp.task('default', ['css', "browser-sync", "watch"]);
 
